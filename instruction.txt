@@ -1,0 +1,81 @@
+INSTRUCTIONS D'INSTALLATION - SWIPE WEBSITE BACKEND
+=====================================================
+
+Ce guide détaille les étapes exactes pour installer et configurer ce projet Node.js avec Express et MongoDB.
+
+PRÉREQUIS SYSTÈME
+================
+
+1. Node.js (version 16.x ou supérieure)
+   - Télécharger depuis: https://nodejs.org/
+   - Vérifier l'installation: node --version
+
+2. npm (inclus avec Node.js)
+   - Vérifier l'installation: npm --version
+
+3. MongoDB
+   - Utiliser MongoDB Atlas (cloud) - https://www.mongodb.com/atlas
+
+4. Git
+   - Télécharger depuis: https://git-scm.com/
+
+ÉTAPES D'INSTALLATION
+====================
+
+1. CLONER LE PROJET
+   ----------------
+   git clone [URL_DU_REPOSITORY]
+   cd SwipeWebSiteBackend
+
+2. INSTALLER LES DÉPENDANCES
+   -------------------------
+   npm install
+
+   Dépendances installées:
+   - express: Framework web pour Node.js
+   - cors: Middleware pour gérer les requêtes cross-origin
+   - dotenv: Gestionnaire de variables d'environnement
+   - mongoos: Driver MongoDB (Note: vérifier si c'est "mongoose" au lieu de "mongoos")
+
+
+4. CONFIGURATION DES VARIABLES D'ENVIRONNEMENT
+   --------------------------------------------
+   - Créer un fichier .env à la racine du projet
+   - Ajouter les variables suivantes:
+
+   PORT=5000
+   # ou pour MongoDB Atlas:
+   # MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/swipe_database
+
+5. STRUCTURE DU PROJET
+   -------------------
+   Le projet est organisé comme suit:
+   - app.js: Fichier principal de l'application
+   - controllers/: Logique métier des contrôleurs
+   - models/: Modèles de données MongoDB
+   - routes/: Définition des routes de l'API
+   - package.json: Configuration des dépendances
+
+6. DÉMARRAGE DU SERVEUR
+   --------------------
+   
+   Développement:
+   npm start
+   
+   Le serveur sera accessible sur http://localhost:3000
+
+7. VÉRIFICATION DE L'INSTALLATION
+   -------------------------------
+   - Ouvrir un navigateur web
+   - Aller à http://localhost:3000
+   - Vérifier que le serveur répond correctement
+   - Consulter les logs dans le terminal pour d'éventuelles erreurs
+
+
+COMMANDES UTILES
+===============
+
+- npm install: Installer les dépendances
+- npm start: Démarrer l'application
+- npm list: Voir les packages installés
+- node --version: Vérifier la version de Node.js
